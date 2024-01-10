@@ -9,17 +9,17 @@ const gridElement = document.getElementById('grid')
 
 const rows = 10
 const cols = 10
-totalCells = rows*cols
+const totalCells = rows*cols
+let className = 'c-100'
 
 for(let i = 0; i<totalCells; i++){
-    const newCell = document.createElement('div')
-    newCell.className = 'cell c-100 '
-    gridElement.appendChild(newCell)
-    newCell.innerText = i+1
+
+    const cell = createCell(className)
+
+    cell.addEventListener('click', ()=>{
+        cell.classList.add('clicked')
+    })
+
+    gridElement.appendChild(cell)
+    cell.innerText = i+1
 }
-
-formElement.addEventListener('submit', (e) => {
-    e.defaultPrevented()
-
-
-})
