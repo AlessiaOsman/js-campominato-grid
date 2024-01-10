@@ -66,8 +66,14 @@ img{
 #grid .cell{
     border: 2px solid #ffffff;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    font-weight: bold;
 }
 
 .cell.clicked{
     background-color: lightblue;
+    color: #000000;
 }
